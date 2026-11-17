@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Snow Plus · 专注模式",
+  "version": "0.1.0",
+  "description": "将雪球整理为 GitHub 风格的阅读界面，收起行情、图片和推广内容。",
+  "permissions": ["storage"],
+  "background": { "service_worker": "src/background.js" },
+  "action": {
+    "default_title": "Snow Plus · 专注模式",
+    "default_popup": "src/popup.html",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png" }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://xueqiu.com/*", "https://www.xueqiu.com/*"],
+    "js": ["src/shared.js", "src/content.js"],
+    "css": ["src/content.css"],
+    "run_at": "document_start"
+  }],
+  "commands": {
+    "toggle-focus": {
+      "suggested_key": { "default": "Alt+Shift+X" },
+      "description": "切换雪球专注模式"
+    }
+  }
+}

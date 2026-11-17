@@ -1,0 +1,18 @@
+{
+  "name": "snow-plus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A GitHub-inspired focus mode for Xueqiu, built as a Chrome MV3 extension.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "playwright test",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

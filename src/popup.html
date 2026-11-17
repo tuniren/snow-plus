@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snow Plus</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="shared.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true">&lt; &gt;</span><div><strong>Snow Plus</strong><p>A quieter workspace.</p></div><span class="version">v0.1</span></header>
+  <main>
+    <label class="master"><span><strong>专注模式</strong><small id="mode-description">把雪球变成你的阅读工作区</small></span><input type="checkbox" data-setting="enabled" role="switch"></label>
+    <div class="section-label">APPEARANCE</div>
+    <label><span>隐藏图片和视频<small>保留文字，减少视觉干扰</small></span><input type="checkbox" data-setting="hideMedia" role="switch"></label>
+    <label><span>隐藏行情与自选<small>收起股价、指数和自选列表</small></span><input type="checkbox" data-setting="hideMarket" role="switch"></label>
+    <label><span>紧凑布局<small>更接近 GitHub Issues 列表</small></span><input type="checkbox" data-setting="compact" role="switch"></label>
+    <label><span>更换标签页标题与图标<small>使用工作区标题和代码图标</small></span><input type="checkbox" data-setting="disguiseTab" role="switch"></label>
+    <p class="status" role="status" id="status">正在读取设置…</p>
+    <a class="open-site" href="https://xueqiu.com/" target="_blank" rel="noreferrer">打开阅读工作区 <span aria-hidden="true">↗</span></a>
+  </main>
+  <footer><span class="dot"></span>仅在雪球生效 <span class="shortcut">Alt + Shift + X</span></footer>
+</body>
+</html>
